@@ -71,8 +71,17 @@ public class MyHashTable<K, V> {
                 if (prev == null) {
                     chainArray[index] = curr.next;
                 }
+                else {
+                    prev.next = curr.next;
+                }
+                size--;
+                return curr.value;
             }
+            prev = curr;
+            curr = curr.next;
+
         }
+        return null;
     }
     public boolean contains(V value) {}
     public K getkey(V value) {}
