@@ -93,6 +93,18 @@ public class MyHashTable<K, V> {
                 curr = curr.next;
             }
         }
+        return false;
     }
-    public K getkey(V value) {}
+    public K getkey(V value) {
+        for ( int i = 0; i < M; i++) {
+            HashNode<K ,V> curr =chainArray[i];
+            while (curr != null) {
+                if (curr.value.equals(value)) {
+                    return curr.key;
+                }
+                curr = curr.next
+            }
+        }
+        return null;
+    }
 }
