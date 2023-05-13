@@ -24,7 +24,14 @@ public class MyHashTable<K, V> {
     }
     private void put(K key, V value) {
         if (key == null || value == null) {
-            throw new IllegalArgumentException("key or value cannot be null")
+            throw new IllegalArgumentException("key or value cannot be null");
+            int index = hash(key);
+            HashNode<K, V> node new HashNode<>(key, value);
+            if(chainArray[index] == null) {
+                chainArray[index] = node;
+
+            }
+
         }
     }
     public V get(K key) {}
