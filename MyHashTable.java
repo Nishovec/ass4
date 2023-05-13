@@ -31,6 +31,15 @@ public class MyHashTable<K, V> {
                 chainArray[index] = node;
 
             }
+            else {
+                HashNode<K, V> curr = chainArray[index];
+                while (curr.next != null) {
+                    if (curr.next.equals(key)) {
+                        curr.value = value;
+                        return;
+                    }
+                }
+            }
 
         }
     }
