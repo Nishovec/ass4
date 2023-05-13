@@ -66,6 +66,13 @@ public class MyHashTable<K, V> {
         int index = hash(key);
         Hashnode<K, V> curr = chainArray[index];
         HashNode<K, V> prev = null;
+        while (curr != null) {
+            if (curr.key.equals(key)) {
+                if (prev == null) {
+                    chainArray[index] = curr.next;
+                }
+            }
+        }
     }
     public boolean contains(V value) {}
     public K getkey(V value) {}
