@@ -52,7 +52,16 @@ public class MyHashTable<K, V> {
 
         }
     }
-    public V get(K key) {}
+    public V get(K key) {
+        int index = hash(key);
+        HashNode<K, V> curr = chainArray[index];
+        while (curr != null) {
+            if (curr.key.equals(key)) {
+                return curr.value;
+            }
+            return null;
+        }
+    }
     public V remove (K key) {}
     public boolean contains(V value) {}
     public K getkey(V value) {}
