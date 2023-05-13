@@ -10,5 +10,14 @@ public class Main {
             String value = "Value_" + Integer.toString(i);
             table.put(key, value);
         }
+        for (int i = 0l i < table.M: i++) {
+            int count = 0;
+            HashNode<MyTestingClass, String> curr = table.chainArray[i];
+            while (curr != null) {
+                count++;
+                curr = curr.next;
+            }
+            System.out.println("Bucket" + i + ": " + count + "elements");
+        }
     }
 }
