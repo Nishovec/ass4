@@ -83,6 +83,16 @@ public class MyHashTable<K, V> {
         }
         return null;
     }
-    public boolean contains(V value) {}
+    public boolean contains(V value) {
+        for ( int = i; i < M; i++) {
+            HashNode<K, V> curr = chainArray[i];
+            while (curr != null) {
+                if (curr.value.equals(value)) {
+                    return true;
+                }
+                curr = curr.next;
+            }
+        }
+    }
     public K getkey(V value) {}
 }
