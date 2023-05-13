@@ -38,8 +38,17 @@ public class MyHashTable<K, V> {
                         curr.value = value;
                         return;
                     }
+                    curr = curr.next;
+                }
+                if (curr.key.equals(key)) {
+                    curr.value = value;
+
+                }
+                else {
+                    curr.next = node;
                 }
             }
+            size ++;
 
         }
     }
