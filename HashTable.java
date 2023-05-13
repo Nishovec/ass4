@@ -7,6 +7,16 @@ public class HashTable<K, V> {
         this.value = value;
 
     }
+    public booleane equals(Object obj) {
+        if(obj == this) {
+            return true;
+        }
+        if (!(obj instanceof MyTestingClass)) {
+            return false;
+        }
+        MyTestingClass other = (MyTestingClass) obj;
+        return this.x == other.x && this.y.equals(other.y);
+    }
 
     @Override
     public String toString() {
