@@ -17,7 +17,7 @@ public class Main {
                 count++;
                 curr = curr.next;
             }
-            System.out.println("Bucket" + i + ": " + count + "elements");
+            System.out.println("Bucket" + i + ": " + count + "element");
         }
     }
 }
