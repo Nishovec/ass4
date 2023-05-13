@@ -62,7 +62,11 @@ public class MyHashTable<K, V> {
             return null;
         }
     }
-    public V remove (K key) {}
+    public V remove (K key) {
+        int index = hash(key);
+        Hashnode<K, V> curr = chainArray[index];
+        HashNode<K, V> prev = null;
+    }
     public boolean contains(V value) {}
     public K getkey(V value) {}
 }
