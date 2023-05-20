@@ -62,6 +62,24 @@ public class MyHashTable<K, V> {
             return null;
         }
     }
+    public V resize(int newSize) {
+        int index = hash(key);
+
+
+        for (int i =0, i < M, i++)
+        Hashnode<K, V> = chainArray[index];
+        while HashNode[M] = null;
+        int newSize = 13;
+        Hashnode2 = Arrays.copyof(Hashnode[M]);
+        int [12] = 12;
+        int [13] = 55;
+        System.out.println(Array.toString(Hashnode2));
+
+    }
+
+
+
+
     public V remove (K key) {
         int index = hash(key);
         Hashnode<K, V> curr = chainArray[index];
